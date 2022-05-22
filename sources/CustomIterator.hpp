@@ -40,7 +40,11 @@ namespace ariel{
             }
             
             //iter++
-            CustomIterator operator++(int);
+            friend CustomIterator operator++(CustomIterator &it,int){
+                CustomIterator temp = it;
+                ++it;
+                return temp;
+            }
     };
 
 }

@@ -32,9 +32,9 @@ int main() {
        VP_SW             VP_BI
  */
 
-  for (auto it = organization.begin(); it != organization.end(); ++it)
+  for (auto it = organization.begin(); it != organization.end(); it++)
   {
-    // cout << (*it) << " ";
+    cout << (*it) << " ";
     // for(auto child: it->getChildren()){
     //   cout<<child<< " ";
     // }

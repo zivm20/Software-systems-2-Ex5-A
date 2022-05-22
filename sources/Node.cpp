@@ -10,4 +10,4 @@ ostream& ariel::operator<<(ostream& output, const Node& node){
 Node::Node(const string& s):value(s), children(){
 
 }
-Node::~Node(){cout<<"deconstruct "<<value<<endl;}
+Node::~Node(){}

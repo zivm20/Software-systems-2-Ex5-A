@@ -9,7 +9,7 @@ namespace ariel{
             //++iter
             CustomIterator& operator++();
             //iter++
-            CustomIterator operator++(int);
+            //CustomIterator operator++(int);
             std::queue<Node*> Q(){return q;}
     };
 }
