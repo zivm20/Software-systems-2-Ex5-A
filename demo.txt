@@ -1,0 +1,47 @@
+==501205== Memcheck, a memory error detector
+==501205== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==501205== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==501205== Command: ./demo
+==501205== 
+==501205== Invalid read of size 8
+==501205==    at 0x402CCC: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x40424E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x4041D2: ariel::Node::getValue[abi:cxx11]() const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x4057C7: ariel::Node::operator==(ariel::Node const&) const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x40576C: ariel::Node::operator!=(ariel::Node const&) const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x404D53: ariel::CustomIterator::operator!=(ariel::CustomIterator const&) const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x4048E4: ariel::OrgChart::add_sub(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x402626: main (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==501205== 
+==501205== 
+==501205== Process terminating with default action of signal 11 (SIGSEGV)
+==501205==  Access not within mapped region at address 0x0
+==501205==    at 0x402CCC: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x40424E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x4041D2: ariel::Node::getValue[abi:cxx11]() const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x4057C7: ariel::Node::operator==(ariel::Node const&) const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x40576C: ariel::Node::operator!=(ariel::Node const&) const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x404D53: ariel::CustomIterator::operator!=(ariel::CustomIterator const&) const (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x4048E4: ariel::OrgChart::add_sub(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==    by 0x402626: main (in /home/zivm20/Desktop/codes/University/Year 2/Semester 2/Software Systems 2/Software-systems-2-Ex5-A/demo)
+==501205==  If you believe this happened as a result of a stack
+==501205==  overflow in your program's main thread (unlikely but
+==501205==  possible), you can try to increase the size of the
+==501205==  main thread stack using the --main-stacksize= flag.
+==501205==  The main thread stack size used in this run was 8388608.
+==501205== 
+==501205== HEAP SUMMARY:
+==501205==     in use at exit: 1,152 bytes in 4 blocks
+==501205==   total heap usage: 5 allocs, 1 frees, 73,856 bytes allocated
+==501205== 
+==501205== LEAK SUMMARY:
+==501205==    definitely lost: 0 bytes in 0 blocks
+==501205==    indirectly lost: 0 bytes in 0 blocks
+==501205==      possibly lost: 0 bytes in 0 blocks
+==501205==    still reachable: 1,152 bytes in 4 blocks
+==501205==         suppressed: 0 bytes in 0 blocks
+==501205== Rerun with --leak-check=full to see details of leaked memory
+==501205== 
+==501205== For lists of detected and suppressed errors, rerun with: -s
+==501205== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

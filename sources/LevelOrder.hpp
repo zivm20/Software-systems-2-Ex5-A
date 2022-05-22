@@ -10,5 +10,6 @@ namespace ariel{
             CustomIterator& operator++();
             //iter++
             CustomIterator operator++(int);
+            std::queue<Node*> Q(){return q;}
     };
 }

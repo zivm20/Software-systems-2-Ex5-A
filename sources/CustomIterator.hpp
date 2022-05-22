@@ -22,11 +22,17 @@ namespace ariel{
             inline Node* start() const{
                 return this->curr;
             }
-            inline bool operator==(const CustomIterator& iter2){
-                return *(this->curr) == *iter2;
+            inline bool operator==(const CustomIterator& iter2)const{
+                if((this->curr == NULL || iter2.start() == NULL)){
+                    return (this->curr == NULL && iter2.start() == NULL);
+                }
+                return *this->curr == *iter2.start();
             }
-            inline bool operator!=(const CustomIterator& iter2){
-                return *(this->curr) != *iter2;
+            inline bool operator!=(const CustomIterator& iter2)const{
+                if((this->curr == NULL || iter2.start() == NULL)){
+                    return !(this->curr == NULL && iter2.start() == NULL);
+                }
+                return *this->curr != *iter2.start();
             }
             //++iter
             virtual CustomIterator& operator++(){

@@ -7,9 +7,10 @@ Level_order_iter::Level_order_iter(Node *first):CustomIterator(first), q(){
 }
 CustomIterator& Level_order_iter::operator++(){
     for(auto node: this->curr->getChildren()){
-        this->q.push(&node);
+        this->q.push(node);
     }
     if(this->q.empty()){
+        
         this->curr = NULL;
     }
     else{

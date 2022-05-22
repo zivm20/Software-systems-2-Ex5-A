@@ -10,12 +10,13 @@ namespace ariel{
 
     class OrgChart{
         private:
-            Node root;
+            Node* root;
             size_t size;
         public:
             OrgChart();
-            OrgChart add_root(const std::string& name);
-            OrgChart add_sub(const std::string& boss, const std::string& sub);
+            ~OrgChart();
+            OrgChart &add_root(const std::string& name);
+            OrgChart &add_sub(const std::string& boss, const std::string& sub);
             Level_order_iter begin();
             Level_order_iter end();
             Level_order_iter begin_level_order();
@@ -26,7 +27,7 @@ namespace ariel{
             Preorder_iter end_preorder();
 
             friend std::ostream& operator<<(std::ostream& output, OrgChart& org){return output;}
-
+            void delAll(Node *n);
     };
 }
 
